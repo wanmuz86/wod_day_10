@@ -13,3 +13,5 @@ function isPrime(input){
   }
 }
 isPrime([1,12,5,7]);
+
+//Your code will not work with 35,169,121,... You only check with 2 and 3
