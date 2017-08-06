@@ -1,15 +1,22 @@
 function isPrime(input){
   
-  for(var i=0; i<input.length; i++){
-   if(input[i] != 1){ 
-      if(input[i] % 2==0 || input[i] % 3==0){
-        document.write(input[i] + "<br>Not Prime<br>")
-      }else{
-        document.write(input[i] + "<br>Prime<br>")
-      }
-  }else{
-    document.write(input[i]+ "<br> Not Prime <br>");
-  }
+  for(var j=0; j<input.length; j++){
+    
+    var prime = true;
+	    
+    if (input[j] == 1){
+     prime = false;
+    }
+ 
+    document.write(input[j]+" ");
+ 
+    for(var i=2; i<=Math.sqrt(input[j]); i++){
+   
+    if (input[j]%i == 0)
+      
+      prime = false;
+    }
+   document.write(prime+"<br>");
   }
 }
-isPrime([1,12,5,7]);
+isPrime([35,230,77,11]);
